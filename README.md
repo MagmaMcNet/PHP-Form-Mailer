@@ -12,7 +12,7 @@ Redirect on form submition
 
 [Relpit](https://replit.com/~)
 
-[More Help](https://mail.magma-mc.net/assets/html/help.html)
+[More Help](https://mail.magma-mc.net/Assets/html/help.html)
 
 ### mail.ini.php
 
