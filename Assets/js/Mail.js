@@ -13,3 +13,6 @@ function compile_message() {
     document.getElementById("Admin_Email").value = email;
     document.getElementById("Message").value = "Email: " + email + "\n Message: " + Msg;
 }
+function load() {
+	document.getElementById("index").action = "../../../"
+}

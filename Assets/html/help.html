@@ -1,15 +1,15 @@
 <!DOCTYPE html>
     <head>
         <meta charset="UTF-8">
-        <meta property="og:title" content="Magma-Mc.net" />
-        <meta property="title" content="Magma-mc.net" />
+        <meta property="og:title" content="HTML Form Emailer" />
+        <meta property="title" content="HTML Form Emailer" />
         <meta property="og:type" content="website" />
-        <meta property="og:description" content="Magma-mc.net -" />
-        <meta name="description" content="Magma-Mc.net -" />
-        <meta name="og:image" content="http://magma-mc.net/favicon.png" />
+        <meta property="og:description" content="HTML Form Emailer - Help - by SMLkaiellis08" />
+        <meta name="description" content="HTML Form Emailer - Help - by SMLkaiellis08" />
+        <meta name="og:image" content="/favicon.png" />
         <meta name="theme-color" content="#F1C40F" />
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-        <link rel="shortcut icon" type="image/png" href="http://magma-mc.net/favicon.png" />
+        <link rel="shortcut icon" type="image/png" href="/favicon.png" />
         <link href="https://fonts.googleapis.com/icon?family=Markazi+Text" rel="stylesheet" />
         <link href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css" rel="stylesheet" />
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet" />
@@ -17,10 +17,11 @@
         <link rel="stylesheet" href="/Assets/css/main.css">
         <link rel="stylesheet" href="/Assets/css/php.css">
         <link rel="stylesheet" href="/Assets/css/table.css">
+				<script src="/Assets/js/Mail.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <title>Php Emailer</title>
+        <title>HTML Form Emailer</title>
     </head>
     <body>
         <div id="content" class="center">
@@ -36,7 +37,7 @@
         </head>
         
         <body>
-            <form action="https://mail.magma-mc.net" method="POST">
+            <form id="index" action="https://mail.magma-mc.net" method="POST">
                 <div class="input-holder">
                     <input class="input" name="Form[Email]" id="Email" type="email" value="" placeholder="email">
                 </div>

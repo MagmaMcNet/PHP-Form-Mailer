@@ -13,19 +13,14 @@ $to = $v['Admin_Email'];
 $reply = $v['Reply'];
 $message = $v['Message'];
 $redirect = $v['Redirect'];
-date_default_timezone_set('Etc/UTC');
-if (!$reply) {
-$reply = "false";
-}
-
+$Version = "0.0.2";
 
 /**
   HTML page css
   HTML page Imports
   HTML page Meta
  */
-
-	echo file_get_contents("Assets/html/header.html");
+echo file_get_contents("Assets/html/header.html");
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -85,8 +80,9 @@ if (!$mail->send()) {
 						echo "<br>";
 						echo "<h2 class='center'>Mail Error:</h2> <p>" . $mail->ErrorInfo . "</p>";
 						echo "<h2>Options</h2>";
-					echo "<p>reply to user: " . $reply . "</p>";
-					echo "<p>Subject: " . $subject . "</p>";
+						echo "<p>PHP Mailer Version: " . $Version . "</p>";
+						echo "<p>reply to user: " . $reply . "</p>";
+						echo "<p>Subject: " . $subject . "</p>";
 					echo "</div>";
 			echo "</body>";
 		echo "</html>";
@@ -96,7 +92,8 @@ if (!$mail->send()) {
 				echo "<div class='center' id='content'>";
 					echo "<h1 style='color:#ffda0a'> Mail successfully Sent</h1>";
 					echo "<h2>Options</h2>";
-					echo "reply to user: " . $reply . "</p>";
+					echo "<p>PHP Mailer Version: " . $Version . "</p>";
+					echo "<p>reply to user: " . $reply . "</p>";
 					echo "<p>Subject: " . $subject . "</p>";
 					echo "</div>";
 			echo "</body>";
