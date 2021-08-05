@@ -1,5 +1,7 @@
 # PHP mailer for HTML Forms
 
+[Archives](http://magma-mc.net/Archive/Mailer/)
+
 [PHPMailer](https://github.com/PHPMailer/PHPMailer) is used in this app
 
 ## Features
