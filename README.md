@@ -12,6 +12,8 @@ Redirect on form submition
 
 [Relpit](https://replit.com/~)
 
+[More Help](https://mail.magma-mc.net/assets/html/help.html)
+
 ### mail.ini.php
 
 edit the values
