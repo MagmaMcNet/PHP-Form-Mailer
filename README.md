@@ -20,9 +20,10 @@ Redirect on form submition
 
 edit the values
 
-`User1` To the email of form
+`User1` To the email of form.
 
-`Pass1` To the app password for email
+`Pass1` To the [app password](https://myaccount.google.com/apppasswords) of the email chose.
+
 
 
 ### Assets/html/help.html
