@@ -1,0 +1,19 @@
+:root {
+    --background-color: #272d33;
+    --background-2: #2d373f;
+    --color: #d6d6d6;
+    --primary: rgb(117, 93, 110);
+    --secondary: rgb(238, 142, 64);
+    --text-secondary: rgb(47, 255, 75);
+    --button-primary: #ad0000;
+    --primary-red: #ad0000;
+    --secondary-orange: #e97313;
+    --primary-green: #56e05a;
+    --discord-button: #3c4b5a;
+    --curseforge-button: #cf6813;
+}
+        textarea {
+            color: white;
+            resize: vertical;
+            background-color: black;
+        }
