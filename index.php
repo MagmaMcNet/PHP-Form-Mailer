@@ -13,15 +13,14 @@ $to = $v['Admin_Email'];
 $reply = $v['Reply'];
 $message = $v['Message'];
 $redirect = $v['Redirect'];
-$Version = "0.0.2";
-
+$Version = "0.0.3";
 /**
   HTML page css
   HTML page Imports
   HTML page Meta
  */
 echo file_get_contents("Assets/html/header.html");
-
+error_log("\n\nPHP Mailer \nVersion: " . $Version . "\n");
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 require 'Exception.php';
@@ -90,7 +89,7 @@ if (!$mail->send()) {
 		echo "<html lang='en'>";
 			echo "<body>";
 				echo "<div class='center' id='content'>";
-					echo "<h1 style='color:#ffda0a'> Mail successfully Sent</h1>";
+					echo "<h1>Mail successfully Sent</h1>";
 					echo "<h2>Options</h2>";
 					echo "<p>PHP Mailer Version: " . $Version . "</p>";
 					echo "<p>reply to user: " . $reply . "</p>";
