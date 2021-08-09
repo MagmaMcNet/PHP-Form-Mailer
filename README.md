@@ -10,6 +10,8 @@ auto Reply to user on form sent
 
 Redirect on form submition
 
+Add Attachments sent to Admin email
+
 ## Setup
 
 [Relpit](https://replit.com/~)
