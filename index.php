@@ -13,7 +13,9 @@ $to = $v['Admin_Email'];
 $reply = $v['Reply'];
 $message = $v['Message'];
 $redirect = $v['Redirect'];
-$Version = "0.0.3";
+ $path = 'Uploads/Public/' . $_FILES["file"]["name"];
+ move_uploaded_file($_FILES["file"]["tmp_name"], $path);
+$Version = "0.0.4";
 /**
   HTML page css
   HTML page Imports
@@ -67,8 +69,22 @@ $mail->MsgHTML($message);
 //Replace the plain text body with one created manually
 // $mail->AltBody = 'This is a plain-text message body';
 //Attach an image file
-// $mail->addAttachment('images/phpmailer_mini.png');
-//send the message, check for errors
+$mail->IsHTML(true);
+	//
+$mail->AddAttachment($path);
+
+	if ($path !== "Uploads/Public/") {
+		$File = "true";
+	} else {
+		$File = "false";
+	}
+
+	if ($reply) {
+		$Reply = "true";
+	} else {
+		$Reply ="false";
+	}
+
 if (!$mail->send()) {
 			echo "<html lang='en'>";
 				echo "<body>";
@@ -80,8 +96,9 @@ if (!$mail->send()) {
 						echo "<h2 class='center'>Mail Error:</h2> <p>" . $mail->ErrorInfo . "</p>";
 						echo "<h2>Options</h2>";
 						echo "<p>PHP Mailer Version: " . $Version . "</p>";
-						echo "<p>reply to user: " . $reply . "</p>";
+						echo "<p>reply to user: " . $Reply . "</p>";
 						echo "<p>Subject: " . $subject . "</p>";
+						echo "<p>File Upload: " . $File . "</p>";
 					echo "</div>";
 			echo "</body>";
 		echo "</html>";
@@ -92,8 +109,9 @@ if (!$mail->send()) {
 					echo "<h1>Mail successfully Sent</h1>";
 					echo "<h2>Options</h2>";
 					echo "<p>PHP Mailer Version: " . $Version . "</p>";
-					echo "<p>reply to user: " . $reply . "</p>";
+					echo "<p>reply to user: " . $Reply . "</p>";
 					echo "<p>Subject: " . $subject . "</p>";
+					echo "<p>File Upload: " . $File . "</p>";
 					echo "</div>";
 			echo "</body>";
 			echo "<script>";
@@ -126,6 +144,7 @@ if (!$mail->send()) {
 				$mail->Subject = $subject;
 
 				$mail->MsgHTML("Your " . $subject . " Form submition. Will be read soon please wait.");
+				
 				
 				$mail->send();
 				}

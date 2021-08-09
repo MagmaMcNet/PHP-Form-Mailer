@@ -13,6 +13,10 @@ function compile_message() {
     document.getElementById("Admin_Email").value = email;
     document.getElementById("Message").value = "Email: " + email + "\n Message: " + Msg;
 }
-function load() {
-	document.getElementById("index").action = "../../../"
+function compile_upload() {
+    // Ids of input that you want to be sent to admin
+    var Msg = document.getElementById("message").value;
+    
+    // set the values to a input for the code to read
+    document.getElementById("Message").value = "Message: " + Msg;
 }
